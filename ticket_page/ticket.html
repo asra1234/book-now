@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./ticket.css" type="text/css">
+  <!-- jsCalendar v1.4.4 Javascript and CSS from jsdelivr npm cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.4/source/jsCalendar.min.js"
+    integrity="sha384-0LaRLH/U5g8eCAwewLGQRyC/O+g0kXh8P+5pWpzijxwYczD3nKETIqUyhuA8B/UB"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.4/source/jsCalendar.min.css"
+    integrity="sha384-44GnAqZy9yUojzFPjdcUpP822DGm1ebORKY8pe6TkHuqJ038FANyfBYBpRvw8O9w" crossorigin="anonymous">
+  <title>Book Now</title>
+</head>
+
+<body>
+  <header>
+    <h1>BUY TICKETS</h1>
+    <nav class="navbar">
+
+      <ul>
+        <li><a href="./ticket.html">Book now</a></li>
+        <li><a href="./details.html">Details</a></li>
+        <li><a href="./payment.html">Payment</a></li>
+        <li><a href="./confirmation.html">Confirmation</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <div class="main-baskground ">
+
+    <form action="form" onsubmit="" class="form" id="form">
+      <div id="date">
+        <h2>Dates</h2>
+        <div class="calender">
+          <h4>When are you comming?</h4>
+        <div id="my-calendar" class="material-theme"></div>
+        </div>
+        <div class="select-date">
+          <label for="date">Date</label>
+          <input type="date" id="select-date" required onchange="updatesummarytable()">
+        </div>
+
+
+      </div>
+      <div id="Duration">
+        <h2>Duration</h2>
+        <ul>
+          <li>Please note that every day from 10.00 a.m to 1.00 p.m and from 3.00 p.m to 6.00 p.m will be considered as
+            peak hours.</li>
+        </ul>
+        <label for="duration">Check In</label>
+        <select id="checkin" onchange="updatetime('checkin')">
+          <option value="7">07.00 am </option>
+          <option value="8">08.00 am </option>
+          <option value="9">09.00 am</option>
+          <option value="10">10.00 am(peak)</option>
+          <option value="11">11.00 am(peak)</option>
+          <option value="12">12.00 pm(peak)</option>
+          <option value="13">01.00 pm(peak)</option>
+          <option value="14">02.00 pm</option>
+          <option value="15">03.00 pm(peak)</option>
+          <option value="16">04.00 pm(peak)</option>
+          <option value="17">05.00 pm(peak)</option>
+          <option value="18">06.00 pm(peak)</option>
+
+
+        </select>
+        <label for="duration">Check out</label>
+        <select id="checkout" onchange="updatetime('checkout')">
+          <option value="8">08.00 am </option>
+          <option value="9">09.00 am</option>
+          <option value="10">10.00 am(peak)</option>
+          <option value="11">11.00 am(peak)</option>
+          <option value="12">12.00 pm(peak)</option>
+          <option value="13">01.00 pm(peak)</option>
+          <option value="14">02.00 pm</option>
+          <option value="15">03.00 pm(peak)</option>
+          <option value="16">04.00 pm(peak)</option>
+          <option value="17">05.00 pm(peak)</option>
+          <option value="18">06.00 pm(peak)</option>
+
+
+        </select>
+      </div>
+
+      <div id="Guests">
+        <h2>Guests</h2>
+        
+
+        <div id="number-of-guests">
+          <h4>Number of Guests</h4>
+          <ul>
+            <li><p>For infants(SL or Foriegner) (under 4 Years) entrance is completely free.</p></li>
+          </ul>
+          <ul>
+            <div class="wrapper">
+              <li><label for="foreigner-adult">Foreigner Adult:</label></li>
+              <input type="checkbox" id="foreigneradultcheck" onchange="checkboxChange('foreigneradult')">
+              <div id="foreigneradultdiv">
+
+                <button onclick="calculate('foreigneradult', 'decrement')" type="button">-</button>
+                <input type="text" name="qty" id="foreigneradult" value="0" class="input-filed">
+                <button onclick="calculate('foreigneradult', 'increment')" class="inc-button" type="button">+</button>
+              </div>
+              <!--               
+              <div class="dec-button">-</div>
+              <input type="text" name="qty" id="1" value="0" class="input-filed">
+              <div class="inc-button">+</div> -->
+
+            </div>
+
+
+            <div class="wrapper">
+              <li><label for="foreigner-child">Foreigner Child:</label></li>
+              <input type="checkbox" id="foreignerchildcheck" onchange="checkboxChange('foreignerchild')">
+              <div id="foreignerchilddiv">
+
+              <!-- <div class="dec-button">-</div> -->
+              <button onclick="calculate('foreignerchild', 'decrement')" type="button">-</button>
+              <input type="text" name="qty" id="foreignerchild" value="0" class="input-filed">
+              <button onclick="calculate('foreignerchild', 'increment')" class="inc-button" type="button">+</button>
+              <!-- <div onclick="increment('foreignerchild')" class="inc-button">+</div> -->
+            </div>
+            </div>
+
+            <div class="wrapper">
+              <li><label for="sl-adult">SL Adult:</label></li>
+              <input type="checkbox" id="sladultcheck" onchange="checkboxChange('sladult')">
+
+
+              <div id="sladultdiv">
+              <!--<div class="dec-button">-</div>-->
+              <button onclick="calculate('sladult', 'decrement')" type="button">-</button>
+              <input type="text" name="qty" id="sladult" value="0" class="input-filed">
+              <!--<div class="inc-button">+</div>-->
+              <button onclick="calculate('sladult', 'increment')" class="inc-button" type="button">+</button>
+
+            </div>
+          </div>
+
+            <div class="wrapper">
+              <li><label for="sl-child">SL Child:</label>
+              </li>
+              <input type="checkbox" id="slchildcheck" onchange="checkboxChange('slchild')">
+
+              <div id="slchilddiv">
+
+              <!--<div class="dec-button">-</div>-->
+              <button onclick="calculate('slchild', 'decrement')" type="button">-</button>
+
+              <input type="text" name="qty" id="slchild" value="0" class="input-filed">
+              <!--<div class="inc-button">+</div>-->
+              <button onclick="calculate('slchild', 'increment')" class="inc-button" type="button">+</button>
+
+            </div>
+            </div>
+            <div class="wrapper">
+              <li><label for="infant">Infant:</label></li>
+              <input type="checkbox" id="infantcheck" onchange="checkboxChange('infant')">
+
+              <!--<div class="dec-button">-</div>-->
+              <div id="infantdiv">
+              <button onclick="calculate('infant', 'decrement')" type="button">-</button>
+
+              <input type="text" name="qty" id="infant" value="0" class="input-filed">
+              <!--<div class="inc-button">+</div>-->
+              <button onclick="calculate('infant', 'increment')" class="inc-button" type="button">+</button>
+
+            </div>
+          </div>
+          </ul>
+
+        </div>
+
+      </div>
+      <button type="button" id="continue-button" onclick="window.location='details.html';">Continue with purchase</button>
+      <div id="charging-chart">
+        <table>
+          <tr>
+            
+            <th colspan="3">Charges</th>
+          </tr>
+          <tr>
+            <th>Category</th>
+            <th>Peak Hours</th>
+            <th>Normal Hours</th>
+          </tr>
+          <tr>
+            <td>foreigner Adult</td>
+            <td>13 USD</td>
+            <td>10 USD</td>
+          </tr>
+          <tr>
+            <td>foreigner Child</td>
+            <td>8 USD</td>
+            <td>5 USD</td>
+          </tr>
+          <tr>
+            <td>SL Adult</td>
+            <td>6 USD</td>
+            <td>4 USD</td>
+          </tr>
+          <tr>
+            <td>SL Child</td>
+            <td>3 USD</td>
+            <td>2 USD</td>
+          </tr>
+          <tr>
+            <td>Infant</td>
+            <td>Free</td>
+            <td>Free</td>
+          </tr>
+
+        </table>
+      </div>
+
+    </form>
+
+    <div class="summary">
+      <img src="./images/tutle.jpg" alt="image about tutle hatchary">
+      <table id="summary-table">
+        <h2>Summary Table</h2>
+
+        <tr>
+          <td>Date</td>
+          <td id="dateid"> </td>
+        </tr>
+        <tr>
+          <td>Time</td>
+          <td id="selecttime">
+            <p id="starttime"> 07.00 am</p><p id="endtime">08.00 am</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td id="selectduration">1 hour </td>
+        </tr>
+        <tr class="heading">
+          <th>Tickets</th>
+          <th>Charges</th>
+
+
+          <tbody id="tickets-table">
+            <tr>
+              <td>Foreigner Child</td>
+              <td id="foreignerchildtd">-</td>
+            </tr>
+            <tr>
+              <td>Foreigner Adult</td>
+              <td id="foreigneradulttd"> -</td>
+            </tr>
+            <tr>
+              <td>SL Child</td>
+              <td id="slchildtd">-</td>
+            </tr>
+            <tr>
+              <td>SL Adult</td>
+              <td id="sladulttd">- </td>
+            </tr>
+            <tr>
+              <td>Infant</td>
+              <td id="infanttd">Free </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr class="total">
+              <td>Total Amount</td>
+              <td id="totaltd">-</td>
+            </tr>
+          </tfoot>
+
+      </table>
+
+      <img src="./images/habitat3.jpg" alt="habitat">
+    </div>
+
+
+
+
+
+
+  </div>
+  <script src="./ticket.js"></script>
+
+</body>
+
+</html>

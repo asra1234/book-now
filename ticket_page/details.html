@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="./details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
+     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <header>
+      <h1>BUY TICKETS</h1>
+      <nav class="navbar">
+       
+    
+    <ul>
+      <li><a href="./ticket.html">Book now</a></li>
+      <li><a href="./details.html">Details</a></li>
+      <li><a href="./payment.html">Payment</a></li>
+      <li><a href="./confirmation.html">Confirmation</a></li>
+      
+  </ul>
+  </nav>
+    </header>
+    <div class="main-background">
+    <div class="form">
+    <form action="payment.html">
+      <h2>Personal Details</h2>
+      <div class=" form-group fullname">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name">
+      </div>
+      <div class="form-group Mobile number">
+        <label for="mobile number">Mobile Number</label>
+        <input type="number" id="Mobilenumber" placeholder="Enter your Mobile Number">
+      </div>
+      <div class="form-group email">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" placeholder="Enter your email address">
+      </div>
+      
+      <div class="form-group confirm-email">
+        <label for="email">Confirm Email</label>
+        <input type="text" id="c-email" placeholder="confirm your email address">
+      </div>
+      <div class="form-group gender">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="" selected disabled>Select your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group continue-btn">
+        <input type="submit" value="Continue with purchase" onclick="handleFormData()"id="submit">
+      </div>
+    </form>
+
+  </div>
+
+  <div class="summary">
+    <table id="summary-table">
+      <h2>Summary Table</h2>
+
+      <tr>
+        <td>Date</td>
+        <td id="dateid"> </td>
+      </tr>
+      <tr>
+        <td>Time</td>
+        <td id="selecttime">
+          <p id="starttime"> 07.00 am</p>
+          <p id="endtime">08.00 am</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td id="selectduration">1 hour </td>
+      </tr>
+      <tr class="heading">
+        <th>Tickets</th>
+        <th>Charges</th>
+
+
+        <tbody id="tickets-table">
+          <tr>
+            <td>Foreigner Child</td>
+            <td id="foreignerchildtd">-</td>
+          </tr>
+          <tr>
+            <td>Foreigner Adult</td>
+            <td id="foreigneradulttd"> -</td>
+          </tr>
+          <tr>
+            <td>SL Child</td>
+            <td id="slchildtd">-</td>
+          </tr>
+          <tr>
+            <td>SL Adult</td>
+            <td id="sladulttd">- </td>
+          </tr>
+          <tr>
+            <td>Infant</td>
+            <td id="infanttd">Free </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr class="total">
+            <td>Total Amount</td>
+            <td id="totaltd">-</td>
+          </tr>
+        </tfoot>
+
+    </table>
+  </div>
+</div>
+    <script src="details.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+  </body>
+</html>

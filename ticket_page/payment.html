@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./payment.css" type="text/css">
+  <title>Payment</title>
+</head>
+<body>
+  <header>
+    <h1>BUY TICKETS</h1>
+    <nav class="navbar">
+     
+  
+  <ul>
+    <li><a href="./ticket.html">Book now</a></li>
+    <li><a href="./details.html">Details</a></li>
+    <li><a href="./payment.html">Payment</a></li>
+    <li><a href="./confirmation.html">Confirmation</a></li>
+    
+</ul>
+</nav>
+  </header>
+  <div class="main-background">
+  <div class="form">
+  <form action="payment" >
+    <h2>Payment Details</h2>
+    <div class=" form-group cardnumber">
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber" placeholder="Enter your card number" required>
+    </div>
+    <div class="form-group eedate">
+      <span>Expiration Date:</span>
+      <select name="edate" id="edate"  required>
+        <option value="edate">01</option>
+        <option value="edate">02</option>
+        <option value="edate">03</option>
+        <option value="edate">04</option>
+        <option value="edate">05</option>
+        <option value="edate">06</option>
+        <option value="edate">07</option>
+        <option value="edate">08</option>
+        <option value="edate">09</option>
+        <option value="edate">10</option>
+        <option value="edate">11</option>
+        <option value="edate">12</option>
+      </select>
+      <select name="edate" id="edate1" required>
+        <option value="edate">2023</option>
+        <option value="edate">2024</option>
+        <option value="edate">2025</option>
+        <option value="edate">2026</option>
+        <option value="edate">2027</option>
+        <option value="edate">2028</option>
+        <option value="edate">2029</option>
+        <option value="edate">2030</option>
+        <option value="edate">2031</option>
+        <option value="edate">2032</option>
+      </select>
+    </div>
+    <div class="form-group cvc">
+      <label for="cvc">CVV Number</label>
+      <input type="text" id="cvc" placeholder="Enter your CVC Number" required>
+    </div>
+    
+    
+    <div class="form-group noc">
+      <label for="noc">Name on Card</label>
+      <input type="text" id="noc" placeholder="Enter your name on card" required>
+    </div>
+    <div class="form-group pay-btn">
+      
+      <input type="submit" value="Pay Now" id="submit"onclick="window.location.href='confirmation.html';">
+    </div>
+  </form>
+
+</div>
+<div class="summary">
+  <table id="summary-table">
+    <h2>Summary Table</h2>
+
+    <tr>
+      <td>Date</td>
+      <td id="dateid"> </td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td id="selecttime">
+        <p id="starttime"> 07.00 am</p><p id="endtime">08.00 am</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td id="selectduration">1 hour </td>
+    </tr>
+    <tr class="heading">
+      <th>Tickets</th>
+      <th>Charges</th>
+
+
+      <tbody id="tickets-table">
+        <tr>
+          <td>Foreigner Child</td>
+          <td id="foreignerchildtd">-</td>
+        </tr>
+        <tr>
+          <td>Foreigner Adult</td>
+          <td id="foreigneradulttd"> -</td>
+        </tr>
+        <tr>
+          <td>SL Child</td>
+          <td id="slchildtd">-</td>
+        </tr>
+        <tr>
+          <td>SL Adult</td>
+          <td id="sladulttd">- </td>
+        </tr>
+        <tr>
+          <td>Infant</td>
+          <td id="infanttd">Free </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr class="total">
+          <td>Total Amount</td>
+          <td id="totaltd">-</td>
+        </tr>
+      </tfoot>
+
+  </table>
+</div>
+</div>
+<script src="./payment.js"></script>
+</body>
+</html>

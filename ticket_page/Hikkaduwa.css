@@ -1,0 +1,401 @@
+@import url('http://fonts.googleapis.com/css?family=Cormorant Garamond|Poltawski Nowy|Nanum Myeongjo');
+
+:root{
+  --white:#ffff;
+  --width:100%;
+}
+
+body{
+    margin: 0;
+    background-image:url(../images/pexels-photo-3866697.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+#logo{
+    margin: 20px 30px 10px 20px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    margin-top: -17px;
+  width: var(--width);
+  height: 17%;
+  position: fixed;
+  z-index: 900;
+  background-color: #041c34;
+}
+.navbar{
+
+    width:var(--width);
+    margin: auto;
+    padding:0;
+    display: flex;
+    align-items: center;
+   
+       
+}
+.navbar ul{
+  padding: 1px;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 20px;
+    position: relative;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: rgb(108, 108, 182);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:var(--width);
+
+}
+.quote{
+    color: wheat;
+    padding-top: 245px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Cormorant Garamond';
+}
+.head{
+    background: var(--white);
+    
+}
+.head1{
+    bottom: -5px;
+    position: relative;
+}
+.container{
+    
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.image{
+    width:600px;
+    height: 500px;
+    margin: 70px;
+}
+.div1{
+    width: 50%;
+}
+.div1 img{
+  animation-name: x;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  }
+
+.content{
+    width: 50%;
+    height: 300px;
+    display: inline-block;
+    margin : 70px 30px;
+   
+}
+
+.content h2{
+    color: blueviolet;
+    font-size:40px ;
+    font-weight: 300px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family:'Cormorant Garamond' ;
+    font-style: italic;
+    
+}
+.content h3{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.content p{
+    font-size: 20px;
+}
+
+.video{
+    margin-top: 40px;
+    width: 40%;
+    height: 400px;
+    margin: 50px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .para2{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin :90px 50px;
+    font-size: 20px;
+    float: left;
+    
+    
+
+  }
+.map{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    margin: 30px;
+}
+.iframe{
+    width: 40%;
+    height: 200px ;
+    margin: 30px;
+}
+.map_para{
+    width:var(--width);
+    height: 400px;
+    margin: 30pxpx;
+    display: flex;
+    justify-content: space-between;
+
+}
+.map_para p{
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 30px;
+    padding: 30px;
+}
+.foot-col{
+    background-color: var(--white);
+}
+footer{
+    width:var(--width);
+    background: linear-gradient(to right,#041c34,black);
+    color:var(--white);
+    padding: 53px 0 27px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    z-index: 900;
+    position: relative;
+  }
+  #logo1{
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  .row{
+    width: 85%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer{
+    width:var(--width);
+    display: flex;
+  }
+
+
+  .cols,.cols_1{
+    width: 90%;
+    display: flex;
+  }
+  .cols h4{
+    margin-bottom:0px ;
+    text-align: center;
+  }
+  .cols p{
+    text-align: justify;
+  }
+  .cols ul{
+    list-style: none;
+  }
+  .cols_1 ul {
+    list-style: none;
+  }
+  .cols ul li{
+    padding: 10px 0;
+  }
+  .cols_1 ul li{
+    padding: 10px 0;
+  }
+  .cols ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .cols_1 ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .cols ul li a:hover{
+    opacity: 1;
+  }
+  .cols_1 ul li a:hover{
+    opacity: 1;
+  }
+  .footer-col p{
+    text-align: center;
+    font-size: 14px;
+  }
+  /*js button*/
+  #booking {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: red;
+
+  }
+  #booking a{
+    text-decoration: none;
+  }
+ 
+  
+  /*animation*/
+  @keyframes x{
+    from{width: 0%;}
+    to{
+        width: 90%;
+    }
+  }
+  @media only screen 
+  and (min-device-width: 374px) 
+  and (max-device-width: 767px) 
+  and (orientation: portrait) { 
+    /* iphone */
+  
+header{
+  width:var(--width);
+  height: 12%;
+  margin-top: 0%;
+}
+.navbar{
+  width: 92%;
+    font-size: 53%;
+}
+.quote p{
+  font-size: 82%;
+  width: 96%;
+  margin-left: 2%;
+}
+.Head{
+  width:var(--width);
+}
+.container{
+  
+  flex-direction: column;
+}
+.image {
+  width: 289px;
+  height: 313px;
+  margin: 44px;
+}
+.div1 {
+  width:var(--width);
+}
+.content {
+  width: 74%;
+  height: 36%;
+  margin: 23px 32px;
+}
+.map_para{
+  padding-bottom: 71%;
+}
+
+.video {
+    width: 94%;
+    height: 300px;
+    margin: 14px;
+    margin-top: -6%;
+    flex-direction: column;
+  }
+  video {
+    width: 99%;
+}
+.para2 {
+  width: 74%;
+  height: 30%;
+  margin: 4px 50px;
+ 
+  }
+  
+.map_para {
+  width: 99%;
+  flex-direction: column;
+  margin: 0%;
+    height: 45%;
+  }
+  footer {
+    width: 100%;
+    padding: 53px 1px 3px;
+}
+  .footer{
+    display: none;
+  }
+
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px)
+  /* ipad */{
+    header {
+      margin-top: -17px;
+      width: var(--width);
+      height: 10%;
+    }
+  
+  .container {
+    flex-direction: column;
+  }
+ 
+.content {
+    width: 86%;
+    height: 30%;
+    margin: 71px 46px;
+  }
+
+.video {
+    width: 90%;
+    margin-top: -8%;
+  }
+  video{
+    width:var(--width);
+  }
+  .para2 {
+    width: 90%;
+  }
+
+.map_para {
+  flex-direction: column-reverse;
+}
+.map {
+  width: 81%;
+  margin-top: -16%;
+}   
+iframe {
+  width:var(--width);
+  margin: 13%;
+  height: 79%;
+}  
+  }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./confirmation.css" type="text/css">
+  <title>confirmation</title>
+</head>
+<body>
+  <header>
+    <h1>BUY TICKETS</h1>
+    <nav class="navbar">
+     
+  
+  <ul>
+    <li><a href="./ticket.html">Book now</a></li>
+    <li><a href="./details.html">Details</a></li>
+    <li><a href="./payment.html">Payment</a></li>
+    <li><a href="./confirmation.html">Confirmation</a></li>
+    
+</ul>
+</nav>
+  </header>
+  <div class="main">
+  <h2>Thank You</h2>
+  <p>Thank you for your order.Your order has been confirmed with us.You can show this confirmation at the entrance.<br> Following is the summary of your order.</p>
+    <div class="summary">
+      <table id="summary-table" >
+        <h3>Summary Table</h3>
+        <tr>
+          <td>Name</td>
+          <td id="fullname"> </td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td id="dateid"> </td>
+        </tr>
+        <tr>
+          <td>Time</td>
+          <td id="selecttime">
+            <p id="starttime"> 07.00 am</p>
+            <p id="endtime">08.00 am</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td id="selectduration">1 hour </td>
+        </tr>
+          <tr>
+            <td>Mobile</td>
+            <td id="Mobilenumber"> </td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td id="email"></td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td id="gender"> </td>
+          </tr>
+          <tr class="heading">
+            <th>Tickets</th>
+            <th>Charges</th>
+            <tbody id="tickets-table">
+              <tr>
+                <td>Foreigner Child</td>
+                <td id="foreignerchildtd">-</td>
+              </tr>
+              <tr>
+                <td>Foreigner Adult</td>
+                <td id="foreigneradulttd"> -</td>
+              </tr>
+              <tr>
+                <td>SL Child</td>
+                <td id="slchildtd">-</td>
+              </tr>
+              <tr>
+                <td>SL Adult</td>
+                <td id="sladulttd">- </td>
+              </tr>
+              <tr>
+                <td>Infant</td>
+                <td id="infanttd">Free </td>
+              </tr>
+            </tbody>
+        
+       <tfoot>
+        <tr class="total">
+          <td>Total Amount</td>
+          <td id="totaltd">-</td>
+        </tr>
+       </tfoot>
+        
+      </table>
+    </div>
+  </div>
+  <script src="./confirmation.js"></script>
+</body>
+</html>
